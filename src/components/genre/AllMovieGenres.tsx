@@ -7,15 +7,6 @@ import { Badge } from "../ui/badge";
 import { ChevronRight, X } from "lucide-react";
 import { useRouter } from "next/navigation";
 
-type MovieGenre = {
-  id: number;
-  name: string;
-};
-
-type MovieGenresResponse = {
-  genres: MovieGenre[];
-};
-
 export const AllMovieGenres = ({ pathname = "./genres" }) => {
   const { push } = useRouter();
   const { selectedGenreIds, generateQueryParams } =

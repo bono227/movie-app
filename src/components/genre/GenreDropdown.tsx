@@ -18,7 +18,6 @@ export const GenreDropdown = ({ showLabel = true }: GenreDropdownProps) => {
   return (
     <DropdownMenu>
       <GenreDropdownTriggerButton showLabel={showLabel} />
-
       <DropdownMenuContent
         align="start"
         className="p-5 space-y-4 w-[335px] sm:w-[577px]"
