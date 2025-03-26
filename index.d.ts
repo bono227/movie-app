@@ -24,3 +24,28 @@ type MoviesListResponse = {
   total_results: number;
   results: MovieDetail[];
 };
+
+type VideoDetails = {
+  key: string;
+  site: string;
+  type: string;
+};
+
+type MovieVideosResponse = {
+  results: VideoDetails[];
+};
+
+type MovieCategoryPage = {
+  title: string;
+  category: string;
+  seeMorePath: string;
+};
+
+type PageRouteParams = {
+  params: {
+    segments: string[];
+  };
+  searchParams: {
+    page: string;
+  };
+};

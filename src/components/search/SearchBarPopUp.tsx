@@ -33,7 +33,6 @@ export const SearchBarPopUp = ({ isMobile }: SearchBarPopUpProps) => {
     return () => document.removeEventListener("mousedown", handleClickOutside);
   }, []);
 
-  console.log(searchValue);
   return (
     <div ref={searchInputRef}>
       <SearchInput

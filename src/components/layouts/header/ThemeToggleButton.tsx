@@ -9,8 +9,6 @@ export const ThemeToggleButton = () => {
   const isDarkThemeActive = resolvedTheme === "dark";
   const toggleTheme = () => setTheme(isDarkThemeActive ? "light" : "dark");
 
-  console.log(isDarkThemeActive);
-
   return (
     <div>
       <Button variant="outline" size="icon" onClick={toggleTheme}>
