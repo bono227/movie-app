@@ -1,4 +1,6 @@
 import { getMoviesByCategory } from "@/services";
+import { MovieLists } from "../movie";
+import { DynamicPagination } from "../common";
 
 type CategoryProps = {
   page: string;
@@ -16,5 +18,14 @@ export const Category = async (props: CategoryProps) => {
 
   const { categoryTitle, movies, totalPages } = response;
 
-  return <div>index</div>;
+  return (
+    <div className="page-primary pt-[59px] pb-8 lg:pb-[76px] space-y-8">
+      <h2 className="mt-8 text-2xl font-medium capitalize text-foreground lg:mt-[52px] lg:text-3xl">
+        {categoryTitle}
+      </h2>
+
+      <MovieLists movies={movies} />
+      <DynamicPagination totalPages={totalPages} />
+    </div>
+  );
 };
